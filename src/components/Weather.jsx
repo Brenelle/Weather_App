@@ -38,7 +38,7 @@ const Weather = () => {
             return;
         }
         try {
-            const res = await fetch(`/.netlify/functions/getWeather?city=${city}`);
+            const res = await fetch(`/.netlify/functions/getweather?city=${city}`);
             const data = await res.json();
             if (!res.ok) {
                 alert(data.message);
