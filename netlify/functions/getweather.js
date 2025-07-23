@@ -1,5 +1,4 @@
  
-import fetch from "node-fetch";
 
 export async function handler(event) {
   const city = event.queryStringParameters.city;
@@ -18,7 +17,7 @@ export async function handler(event) {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: "Failed to fetch weather", message:"Failed to fetch" }),
+      body: JSON.stringify({ error: "Failed to fetch weather", message:err.message, }),
     };
   }
 }
